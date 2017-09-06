@@ -29,14 +29,14 @@ func getDefaultFile() string {
 
 func usage() string {
 	return `
-ssh-agent-wrapper is a simple wrapper for starting the ssh agent and
-adding keys. It will check if the "ssh agent env" file exist. If not
-then it will start the "ssh-agent" process and save the output to the
-ssh agent env file. That can late be used to determine pid etc. of
-the ssh-agent process.
+ssh-agent-wrapper is a simple wrapper for starting the ssh-agent and
+adding keys (on start). It will check if the "ssh agent env" file
+exist and if not then it will start the "ssh-agent" process and save
+the output to the ssh agent env file. That can later be used to
+determine pid etc. of the ssh-agent process.
 
 this script can be used with startup of a shell by adding following to
-~/.bashrc or ~/.profile or any other startup script.
+.bashrc, .profile or any other startup script.
 
 	eval $(ssh-agent-wrapper)
 
